@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard | Byapaar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="brand-mark"><a href="index.html"></a></div>
+        <span ><a href="index.html" class="brand-name">Byapaar</a></span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="escrow.html">Escrow</a>
+        <a href="wellness.html">Wellness</a>
+      </nav>
+      <a href="login.html" class="btn-nav">Logout</a>
+    </div>
+  </header>
+
+  <!-- DASHBOARD MAIN -->
+  <section class="dashboard">
+    <div class="container">
+
+      <!-- Title -->
+      <div class="dash-header">
+        <h2>Welcome back, Aditi Enterprises 👋</h2>
+        <p class="muted">Here’s your business overview and financial summary</p>
+      </div>
+
+      <!-- Top Stats -->
+      <div class="dash-grid">
+        <div class="stat-card">
+          <div class="icon-box">💰</div>
+          <div>
+            <h3>Account Balance</h3>
+            <p class="stat-value">₹1,42,500</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="icon-box">📄</div>
+          <div>
+            <h3>Pending Invoices</h3>
+            <p class="stat-value">3</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="icon-box">🏦</div>
+          <div>
+            <h3>Available Credit</h3>
+            <p class="stat-value">₹5,00,000</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="icon-box">📈</div>
+          <div>
+            <h3>Monthly Growth</h3>
+            <p class="stat-value">+12%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart Section -->
+<div class="chart-section">
+  <h3>Revenue Analytics (Last 30 Days)</h3>
+
+  <div class="chart">
+    <!-- 30 bars for each day -->
+    <div class="bar" data-value="₹24,000" style="height:65%;"></div>
+    <div class="bar" data-value="₹30,200" style="height:82%;"></div>
+    <div class="bar" data-value="₹18,700" style="height:50%;"></div>
+    <div class="bar" data-value="₹26,800" style="height:70%;"></div>
+    <div class="bar" data-value="₹34,100" style="height:88%;"></div>
+    <div class="bar" data-value="₹28,000" style="height:75%;"></div>
+    <div class="bar" data-value="₹37,500" style="height:96%;"></div>
+    <div class="bar" data-value="₹31,800" style="height:80%;"></div>
+    <div class="bar" data-value="₹22,500" style="height:62%;"></div>
+    <div class="bar" data-value="₹25,700" style="height:68%;"></div>
+    <div class="bar" data-value="₹29,600" style="height:78%;"></div>
+    <div class="bar" data-value="₹15,400" style="height:44%;"></div>
+    <div class="bar" data-value="₹35,000" style="height:90%;"></div>
+    <div class="bar" data-value="₹32,400" style="height:83%;"></div>
+    <div class="bar" data-value="₹27,800" style="height:72%;"></div>
+    <div class="bar" data-value="₹33,000" style="height:86%;"></div>
+    <div class="bar" data-value="₹21,700" style="height:58%;"></div>
+    <div class="bar" data-value="₹20,000" style="height:54%;"></div>
+    <div class="bar" data-value="₹25,200" style="height:67%;"></div>
+    <div class="bar" data-value="₹30,800" style="height:81%;"></div>
+    <div class="bar" data-value="₹38,000" style="height:98%;"></div>
+    <div class="bar" data-value="₹34,400" style="height:89%;"></div>
+    <div class="bar" data-value="₹28,500" style="height:74%;"></div>
+    <div class="bar" data-value="₹26,900" style="height:69%;"></div>
+    <div class="bar" data-value="₹19,800" style="height:52%;"></div>
+    <div class="bar" data-value="₹24,700" style="height:64%;"></div>
+    <div class="bar" data-value="₹29,900" style="height:79%;"></div>
+    <div class="bar" data-value="₹35,800" style="height:92%;"></div>
+    <div class="bar" data-value="₹22,300" style="height:60%;"></div>
+    <div class="bar" data-value="₹37,000" style="height:95%;"></div>
+  </div>
+
+  <p class="muted">Hover over bars to view revenue for each day</p>
+</div>
+
+      <!-- Transaction Table -->
+      <div class="transactions">
+        <h3>Recent Transactions</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Details</th>
+              <th>Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08 Nov 2025</td>
+              <td>Invoice #INV-204</td>
+              <td><span class="badge success">Paid</span></td>
+              <td>₹25,000</td>
+            </tr>
+            <tr>
+              <td>07 Nov 2025</td>
+              <td>Vendor Payment</td>
+              <td><span class="badge pending">Pending</span></td>
+              <td>₹12,300</td>
+            </tr>
+            <tr>
+              <td>05 Nov 2025</td>
+              <td>Received from Client</td>
+              <td><span class="badge success">Paid</span></td>
+              <td>₹48,000</td>
+            </tr>
+            <tr>
+              <td>04 Nov 2025</td>
+              <td>Invoice #INV-198</td>
+              <td><span class="badge failed">Failed</span></td>
+              <td>₹9,800</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sidebar Summary -->
+      <div class="credit-summary">
+        <h3>Credit Summary</h3>
+        <div class="credit-box">
+          <p><strong>Active Credit:</strong> ₹2,50,000</p>
+          <p><strong>Credit Limit:</strong> ₹5,00,000</p>
+          <div class="progress-bar">
+            <div class="progress" style="width:50%;"></div>
+          </div>
+          <p class="muted">You’ve used 50% of your credit limit.</p>
+          <a href="marketplace.html" class="btn">Explore Loans</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Byapaar. Empowering MSMEs.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

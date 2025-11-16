@@ -1,0 +1,976 @@
+/* -----------------------------------
+   BYAPAAR | Clean Frontend CSS
+   Pro Fintech UI | HTML + CSS Only
+----------------------------------- */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #071227;
+  color: #eaf2ff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* COLORS */
+:root {
+  --bg: #8095bc;
+  --panel: #436291;
+  --muted: #a9c3ea;
+  --accent: #ffffff;
+  --accent-hover: #ffffff;
+  --dark: #8f9cb0;
+  --text: #000000;
+}
+
+/* -----------------------------------
+   HEADER / NAVBAR
+----------------------------------- */
+.site-header {
+  background-color: #816522;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(119, 88, 88, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-mark {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: burlywood;
+  margin-right: 10px;
+}
+
+.brand-name {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  color: rgb(255, 255, 255);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+  display: inline-block; 
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color: black;
+}
+
+.btn-nav {
+  color: white;
+}
+
+.btn-nav:hover {
+  color: black;
+}
+
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: black;
+  transition: width 0.3s ;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.btn-nav {
+  background: rgb(203, 150, 36);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-nav:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* -----------------------------------
+   HERO
+----------------------------------- */
+.hero {
+  background: linear-gradient(120deg, #061536, #031124);
+  padding: 100px 0;
+}
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+.hero-img {
+  flex: 1;
+  min-width: 300px;
+  height: 280px;
+  background: url('https://img.freepik.com/free-vector/finance-dashboard-concept-illustration_114360-7923.jpg') no-repeat center;
+  background-size: contain;
+}
+
+/* CTA BUTTONS */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #031016;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+/* -----------------------------------
+   FEATURES
+----------------------------------- */
+.features {
+  background-color: #081739;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 1.9rem;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: left;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 30px rgba(32, 193, 181, 0.2);
+}
+
+.icon-box {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* -----------------------------------
+   CTA SECTION
+----------------------------------- */
+.cta {
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  color: #02101c;
+  text-align: center;
+  padding: 90px 0;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  color: #04101e;
+}
+
+/* -----------------------------------
+   CONTACT
+----------------------------------- */
+.contact {
+  background-color: #081739;
+  padding: 100px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.contact-info ul {
+  list-style: none;
+}
+
+.contact-info ul li {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.contact-form {
+  background-color: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  margin-bottom: 14px;
+  font-family: inherit;
+}
+
+/* -----------------------------------
+   DASHBOARD / MARKETPLACE / OTHER PAGES
+----------------------------------- */
+section.dashboard,
+section.marketplace,
+section.escrow,
+section.wellness,
+section.login {
+  padding: 100px 0;
+  background-color: #081739;
+  text-align: center;
+}
+
+section h2 {
+  color: var(--text);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+section p {
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* Dashboard Charts */
+.chart-box {
+  background: var(--panel);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.chart-placeholder {
+  background: rgba(255, 255, 255, 0.05);
+  height: 180px;
+  border-radius: 8px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Login Page Box */
+.login-box {
+  max-width: 400px;
+  background-color: var(--panel);
+  padding: 40px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.login-box h2 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+.footer {
+  background-color: var(--dark);
+  color: var(--muted);
+  text-align: center;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* -----------------------------------
+   RESPONSIVE
+----------------------------------- */
+@media (max-width: 900px) {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+    background-size: 85%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .login-box {
+    padding: 28px;
+  }
+}
+
+/* -----------------------------
+   ICON FIXES (FINAL VERSION)
+--------------------------------*/
+
+/* General icon container */
+.icon, .icon-box svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  vertical-align: middle;
+  margin-right: 6px;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+/* Emoji-based icons (inside .icon-box) */
+.icon-box {
+  font-size: 34px;
+  line-height: 1;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(32,193,181,0.1);
+}
+
+/* Small icons inside text/buttons */
+.btn .icon,
+h1 .icon,
+h2 .icon,
+h3 .icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  margin-right: 6px;
+  position: relative;
+  top: 2px;
+}
+
+/* Aligning icons in buttons */
+.btn svg.icon {
+  stroke: currentColor;
+  fill: none;
+}
+
+/* Fix color inheritance */
+.icon, .icon-box svg {
+  color: inherit;
+  stroke: currentColor;
+}
+
+/* On hover, gently animate */
+.card:hover .icon-box {
+  transform: scale(1.05);
+  background: rgba(32,193,181,0.08);
+  box-shadow: 0 8px 20px rgba(32,193,181,0.15);
+}
+
+/* SVG icons inside headings or forms */
+.contact-info h3 .icon,
+.contact-form .btn .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Fix line-height issues across browsers */
+svg.icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* -----------------------------
+   DASHBOARD DESIGN
+--------------------------------*/
+
+.dash-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dash-header h2 {
+  color: var(--text);
+  font-size: 1.8rem;
+}
+
+.dash-header p {
+  color: var(--muted);
+}
+
+/* Stat Grid */
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(32,193,181,0.15);
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* -----------------------------
+   RESPONSIVE MONTHLY BAR CHART
+--------------------------------*/
+
+.chart-section {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.chart-section h3 {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+/* Chart container */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 240px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 30px 20px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+.chart::-webkit-scrollbar {
+  height: 6px;
+}
+.chart::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.chart::-webkit-scrollbar-thumb {
+  background: var(--accent-hover);
+  border-radius: 6px;
+}
+
+/* Bar styling */
+.bar {
+  flex: 0 0 24px; /* fixed width on desktop */
+  background: linear-gradient(180deg, var(--accent), var(--accent-hover));
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+  min-height: 20px;
+}
+
+.bar:hover {
+  background: linear-gradient(180deg, var(--accent-hover), var(--accent));
+  transform: scaleY(1.08);
+}
+
+/* Tooltip */
+.bar::after {
+  content: attr(data-value);
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.2s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.bar:hover::after {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+/* Tooltip arrow */
+.bar::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--panel) transparent transparent transparent;
+  opacity: 0;
+  transition: 0.2s ease;
+  z-index: 9;
+}
+
+.bar:hover::before {
+  opacity: 1;
+}
+
+/* -----------------------------------
+   RESPONSIVE FIXES
+----------------------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .chart {
+    height: 200px;
+    padding: 24px 16px;
+  }
+  .bar {
+    flex: 0 0 20px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .chart {
+    height: 180px;
+    padding: 20px 12px;
+    gap: 8px;
+  }
+
+  .bar {
+    flex: 0 0 16px;  /* narrower bars */
+    border-radius: 4px;
+  }
+
+  .bar::after {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
+  .chart-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .chart-section p {
+    font-size: 0.9rem;
+  }
+}
+
+.chart {
+  scroll-snap-type: x mandatory;
+}
+.bar {
+  scroll-snap-align: end;
+}
+
+/* Transactions Table */
+.transactions {
+  background-color: var(--panel);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 70px;
+}
+
+.transactions table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+  text-align: left;
+  margin-top: 15px;
+}
+
+.transactions th, .transactions td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.transactions th {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge.success {
+  background: rgba(32,193,181,0.2);
+  color: var(--accent);
+}
+
+.badge.pending {
+  background: rgba(255,193,7,0.2);
+  color: #ffc107;
+}
+
+.badge.failed {
+  background: rgba(255,77,77,0.2);
+  color: #ff4d4d;
+}
+
+/* Credit Summary Box */
+.credit-summary {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.credit-box {
+  background: var(--panel);
+  padding: 30px;
+  border-radius: 12px;
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 5px;
+  margin: 10px 0 15px 0;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: 5px;
+}
+
+/* -----------------------------
+   LOGIN PAGE DESIGN
+--------------------------------*/
+
+.login {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #031124, #071a38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.login .container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  background-color: var(--panel);
+  padding: 50px 40px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.login-box h2 {
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.login-box p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* Input Fields */
+.login-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: 0.3s ease;
+}
+
+.login-box input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 6px rgba(32,193,181,0.4);
+}
+
+/* Remember + Forgot */
+/* -----------------------------
+   FIXED REMEMBER ME + FORGOT
+--------------------------------*/
+/* -----------------------------------
+   CLEAN FIX — REMEMBER ME ALIGNMENT
+----------------------------------- */
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  margin-top: 15px;
+}
+
+.remb{
+  margin-bottom: auto;
+}
+
+.remember input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--accent);
+  transform: translateY(1px); /* centers checkbox vertically with text */
+}
+
+.forgot {
+  color: var(--accent-hover);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+  .login-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .forgot {
+    align-self: flex-end;
+  }
+}
+/* Buttons */
+.btn.full {
+  width: 100%;
+  padding: 12px 0;
+  background: var(--accent);
+  color: #02101c;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn.full:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Signup Text */
+.signup-text {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+.signup-text a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  color: var(--accent-hover);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-box {
+    padding: 35px 24px;
+  }
+
+  .login-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .login-box input {
+    padding: 10px 12px;
+  }
+
+  .btn.full {
+    padding: 10px 0;
+  }
+}
