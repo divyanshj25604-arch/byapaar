@@ -13,3 +13,5 @@ The project includes:
 	•	Responsive layout
 
 No JavaScript, backend, or database is used — the website is fully static and created as a front-end design showcase.
+
+live preview:(https://byapaar.vercel.app/)
