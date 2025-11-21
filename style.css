@@ -383,6 +383,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: scroll;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.5s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: greenyellow;
+  box-shadow: 0 14px 30px rgba(2, 63, 59, 0.2);
 }
 
 .testimonial-text {
@@ -698,17 +706,17 @@ section p {
 
 .footer-icon {
   display: inline-block;
-  background: #666;
   border-radius: 50%;
-  width: 34px;
   height: 34px;
+  width: 34px;
   padding: 3px;
   text-align: center;
   transition: background 0.15s;
 }
 
 .footer-icon:hover {
-  background: #72e0ac;
+  transform: translateY(-2px);
+  background-color: #72e0ac;
 }
 
 .footer-cards {
