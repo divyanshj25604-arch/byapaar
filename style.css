@@ -159,19 +159,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Animate hamburger to X when checked */
-.menu-toggle:checked ~ .hamburger .hamburger-bar:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
-}
-
-.menu-toggle:checked ~ .hamburger .hamburger-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle:checked ~ .hamburger .hamburger-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
 /* -----------------------------------
    HERO
 ----------------------------------- */
@@ -248,7 +235,6 @@ body {
 .btn-appdownload {
   display: flex;
   align-items: center;
-  gap: 10px;
   background: transparent;
   border: 1.5px solid var(--accent);
   color: #fff;
