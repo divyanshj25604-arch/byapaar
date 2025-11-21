@@ -133,6 +133,46 @@ body {
 }
 
 /* -----------------------------------
+   HAMBURGER MENU (CSS-ONLY)
+----------------------------------- */
+
+/* Hide the checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon - hidden by default on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 8px;
+  z-index: 101;
+}
+
+.hamburger-bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger to X when checked */
+.menu-toggle:checked ~ .hamburger .hamburger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* -----------------------------------
    HERO
 ----------------------------------- */
 .hero {
@@ -347,13 +387,14 @@ body {
 }
 
 /* -----------------------------------
-   Testimonials
+   Testimonials - Infinite Scroll
 ----------------------------------- */
 .testimonials {
   width: 100%;
-  padding: 20px;
+  padding: 60px 20px;
   background-color: white;
   text-align: center;
+  overflow: hidden;
 }
 
 .section-title {
@@ -364,11 +405,34 @@ body {
   letter-spacing: 1.2px;
 }
 
-.testimonial-row {
+/* Wrapper to hide overflow */
+.testimonials-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Track that contains all cards and animates */
+.testimonial-track {
   display: flex;
-  flex-wrap: wrap;
   gap: 32px;
-  justify-content: center;
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
+}
+
+/* Pause animation on hover */
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+/* Keyframe animation for continuous scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .testimonial-card {
@@ -378,13 +442,15 @@ body {
   border-radius: 32px;
   box-shadow: 0 6px 24px rgba(31,89,184,0.06);
   width: 320px;
+  min-width: 320px;
   max-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: scroll;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: 0.5s ease;
+  flex-shrink: 0;
 }
 
 .testimonial-card:hover {
@@ -397,6 +463,8 @@ body {
   font-size: 1.18rem;
   margin-bottom: 21px;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .testimonial-user {
@@ -423,12 +491,13 @@ body {
 
 /* Responsive Fixes */
 @media (max-width: 900px) {
-  .testimonial-row {
+  .testimonial-track {
     gap: 18px;
+    animation-duration: 30s;
   }
   .testimonial-card {
-    max-width: 95vw;
-    min-width: 240px;
+    width: 280px;
+    min-width: 280px;
   }
 }
 
@@ -440,15 +509,16 @@ body {
     font-size: 1.6rem;
     margin-bottom: 30px;
   }
-  .testimonial-row {
-    flex-direction: column;
+  .testimonial-track {
     gap: 12px;
-    align-items: center;
+    animation-duration: 25s;
   }
   .testimonial-card {
     padding: 24px 14px;
     border-radius: 20px;
     font-size: 1rem;
+    width: 240px;
+    min-width: 240px;
   }
   .testimonial-avatar {
     width: 32px;
@@ -803,6 +873,63 @@ section p {
   .nav-links {
     justify-content: center;
     gap: 12px;
+  }
+}
+
+/* Mobile Navigation - Hamburger Menu */
+@media (max-width: 768px) {
+  /* Show hamburger icon */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+  }
+
+  /* Show nav links when checkbox is checked */
+  .menu-toggle:checked ~ .nav-links {
+    max-height: 400px;
+    padding: 20px 0;
+  }
+
+  /* Style nav links for mobile */
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(119, 88, 88, 0.08);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* Login button in mobile menu */
+  .nav-links .btn-nav {
+    margin: 10px 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    display: block;
+  }
+
+  /* Adjust header container for mobile */
+  .site-header .container {
+    position: relative;
   }
 }
 

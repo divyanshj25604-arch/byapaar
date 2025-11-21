@@ -18,6 +18,16 @@
                 <span><a href="index.html" class="brand-name">Byapaar</a></span>
             </div>
 
+            <!-- Hamburger checkbox (hidden) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- Hamburger icon -->
+            <label for="menu-toggle" class="hamburger">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </label>
+
             <!-- NAV: links to all pages (keep order consistent) -->
             <nav class="nav-links">
                 <a href="index.html">Home</a>
@@ -25,8 +35,8 @@
                 <a href="marketplace.html">Marketplace</a>
                 <a href="escrow.html">Escrow</a>
                 <a href="wellness.html">Wellness</a>
+                <a href="login.html" class="btn-nav">Login</a>
             </nav>
-            <a href="login.html" class="btn-nav">Login</a>
         </div>
     </header>
 
@@ -135,15 +145,17 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <h2 class="section-title">What Our Users Are Saying</h2>
-        <div class="carousel">
-            <div class="testimonial-row">
+        <div class="testimonials-wrapper">
+            <div class="testimonial-track">
+                <!-- First set of testimonials -->
                 <div class="testimonial-card">
                     <p class="testimonial-text">
                         This app helped me finally control my spending. I saved more in 3 months than I did all of last
                         year!
                     </p>
                     <div class="testimonial-user">
-                        <img src="https://avatars.githubusercontent.com/u/139988450?v=4" alt="rahul kumar" class="testimonial-avatar">
+                        <img src="https://avatars.githubusercontent.com/u/139988450?v=4" alt="rahul kumar"
+                            class="testimonial-avatar">
                         <span class="testimonial-name"><strong>Rahul Kumar, Sonipat</strong></span>
                     </div>
                 </div>
@@ -152,7 +164,8 @@
                         Simple, clean, and powerful. Transferring money is faster than my bank!
                     </p>
                     <div class="testimonial-user">
-                        <img src="https://media.licdn.com/dms/image/v2/D5603AQFUB4oTaEp-kw/profile-displayphoto-shrink_800_800/B56ZQW3OrZH0Ac-/0/1735550365284?e=1765411200&v=beta&t=WD_eQnpmWgQEqh4AwIJyAqD8L3lucD2OHgOWMpNxbvs" alt="" class="testimonial-avatar">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQFUB4oTaEp-kw/profile-displayphoto-shrink_800_800/B56ZQW3OrZH0Ac-/0/1735550365284?e=1765411200&v=beta&t=WD_eQnpmWgQEqh4AwIJyAqD8L3lucD2OHgOWMpNxbvs"
+                            alt="" class="testimonial-avatar">
                         <span class="testimonial-name"><strong>Piyush Jain, Delhi</strong></span>
                     </div>
                 </div>
@@ -170,7 +183,8 @@
                         The app is so easy to use! My business payments are quicker, and the dashboard is super helpful.
                     </p>
                     <div class="testimonial-user">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3kprXSmAqpSeDBVP9vmHZpvCbB_WNcxn8Eg&s" alt="" class="testimonial-avatar">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3kprXSmAqpSeDBVP9vmHZpvCbB_WNcxn8Eg&s"
+                            alt="" class="testimonial-avatar">
                         <span class="testimonial-name"><strong>Arjun, Chennai</strong></span>
                     </div>
                 </div>
@@ -179,7 +193,8 @@
                         Customer service is fantastic. Whenever I have a question, I get an answer fast and clearly.
                     </p>
                     <div class="testimonial-user">
-                        <img src="https://www.voyzapp.com/upload-nct/artist_profile_pic/VS697742/bc976b2596bbb9e5ca0e9a9ad9839be4.png" alt="" class="testimonial-avatar">
+                        <img src="https://www.voyzapp.com/upload-nct/artist_profile_pic/VS697742/bc976b2596bbb9e5ca0e9a9ad9839be4.png"
+                            alt="" class="testimonial-avatar">
                         <span class="testimonial-name"><strong>Fatima, Mumbai</strong></span>
                     </div>
                 </div>
@@ -188,7 +203,70 @@
                         I trust this platform for all my transactions. Security and transparency are top-notch!
                     </p>
                     <div class="testimonial-user">
-                        <img src="https://st.depositphotos.com/1093689/1373/i/450/depositphotos_13736150-stock-photo-close-up-image-of-happy.jpg" alt="" class="testimonial-avatar">
+                        <img src="https://st.depositphotos.com/1093689/1373/i/450/depositphotos_13736150-stock-photo-close-up-image-of-happy.jpg"
+                            alt="" class="testimonial-avatar">
+                        <span class="testimonial-name"><strong>John, Bangalore</strong></span>
+                    </div>
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        This app helped me finally control my spending. I saved more in 3 months than I did all of last
+                        year!
+                    </p>
+                    <div class="testimonial-user">
+                        <img src="https://avatars.githubusercontent.com/u/139988450?v=4" alt="rahul kumar"
+                            class="testimonial-avatar">
+                        <span class="testimonial-name"><strong>Rahul Kumar, Sonipat</strong></span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        Simple, clean, and powerful. Transferring money is faster than my bank!
+                    </p>
+                    <div class="testimonial-user">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQFUB4oTaEp-kw/profile-displayphoto-shrink_800_800/B56ZQW3OrZH0Ac-/0/1735550365284?e=1765411200&v=beta&t=WD_eQnpmWgQEqh4AwIJyAqD8L3lucD2OHgOWMpNxbvs"
+                            alt="" class="testimonial-avatar">
+                        <span class="testimonial-name"><strong>Piyush Jain, Delhi</strong></span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        I love the cashback. It's like free money every time I top-up!
+                    </p>
+                    <div class="testimonial-user">
+                        <img src="/icons/kunal.png" alt="kunal goyal" class="testimonial-avatar">
+                        <span class="testimonial-name"><strong>Kunal, Uttar Pradesh</strong></span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        The app is so easy to use! My business payments are quicker, and the dashboard is super helpful.
+                    </p>
+                    <div class="testimonial-user">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3kprXSmAqpSeDBVP9vmHZpvCbB_WNcxn8Eg&s"
+                            alt="" class="testimonial-avatar">
+                        <span class="testimonial-name"><strong>Arjun, Chennai</strong></span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        Customer service is fantastic. Whenever I have a question, I get an answer fast and clearly.
+                    </p>
+                    <div class="testimonial-user">
+                        <img src="https://www.voyzapp.com/upload-nct/artist_profile_pic/VS697742/bc976b2596bbb9e5ca0e9a9ad9839be4.png"
+                            alt="" class="testimonial-avatar">
+                        <span class="testimonial-name"><strong>Fatima, Mumbai</strong></span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        I trust this platform for all my transactions. Security and transparency are top-notch!
+                    </p>
+                    <div class="testimonial-user">
+                        <img src="https://st.depositphotos.com/1093689/1373/i/450/depositphotos_13736150-stock-photo-close-up-image-of-happy.jpg"
+                            alt="" class="testimonial-avatar">
                         <span class="testimonial-name"><strong>John, Bangalore</strong></span>
                     </div>
                 </div>
@@ -309,8 +387,7 @@
                         <a href="#">
                             <span class="footer-icon">
                                 <!-- YouTube SVG -->
-                                <img src="/icons/youtube.png" alt="Facebook" width="30" height="30"
-                                    class="footer-icon">
+                                <img src="/icons/youtube.png" alt="Facebook" width="30" height="30" class="footer-icon">
                             </span>
                         </a>
                     </div>
@@ -329,7 +406,7 @@
                 All major credit cards accepted | Fast checkout with Byapaar Pay
             </div>
             <div class="footer-copyright">
-                Byapaar, Rishihood University,2527873 Haryana, India. 
+                Byapaar, Rishihood University,2527873 Haryana, India.
             </div>
         </div>
     </footer>

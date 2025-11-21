@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Dashboard | Byapaar</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -13,16 +15,27 @@
     <div class="container">
       <div class="brand">
         <div class="brand-mark"><a href="index.html"></a></div>
-        <span ><a href="index.html" class="brand-name">Byapaar</a></span>
+        <span><a href="index.html" class="brand-name">Byapaar</a></span>
       </div>
+
+      <!-- Hamburger checkbox (hidden) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+      <!-- Hamburger icon -->
+      <label for="menu-toggle" class="hamburger">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="dashboard.html" class="active">Dashboard</a>
         <a href="marketplace.html">Marketplace</a>
         <a href="escrow.html">Escrow</a>
         <a href="wellness.html">Wellness</a>
+        <a href="login.html" class="btn-nav">Logout</a>
       </nav>
-      <a href="login.html" class="btn-nav">Logout</a>
     </div>
   </header>
 
@@ -72,45 +85,45 @@
       </div>
 
       <!-- Chart Section -->
-<div class="chart-section">
-  <h3>Revenue Analytics (Last 30 Days)</h3>
+      <div class="chart-section">
+        <h3>Revenue Analytics (Last 30 Days)</h3>
 
-  <div class="chart">
-    <!-- 30 bars for each day -->
-    <div class="bar" data-value="₹24,000" style="height:65%;"></div>
-    <div class="bar" data-value="₹30,200" style="height:82%;"></div>
-    <div class="bar" data-value="₹18,700" style="height:50%;"></div>
-    <div class="bar" data-value="₹26,800" style="height:70%;"></div>
-    <div class="bar" data-value="₹34,100" style="height:88%;"></div>
-    <div class="bar" data-value="₹28,000" style="height:75%;"></div>
-    <div class="bar" data-value="₹37,500" style="height:96%;"></div>
-    <div class="bar" data-value="₹31,800" style="height:80%;"></div>
-    <div class="bar" data-value="₹22,500" style="height:62%;"></div>
-    <div class="bar" data-value="₹25,700" style="height:68%;"></div>
-    <div class="bar" data-value="₹29,600" style="height:78%;"></div>
-    <div class="bar" data-value="₹15,400" style="height:44%;"></div>
-    <div class="bar" data-value="₹35,000" style="height:90%;"></div>
-    <div class="bar" data-value="₹32,400" style="height:83%;"></div>
-    <div class="bar" data-value="₹27,800" style="height:72%;"></div>
-    <div class="bar" data-value="₹33,000" style="height:86%;"></div>
-    <div class="bar" data-value="₹21,700" style="height:58%;"></div>
-    <div class="bar" data-value="₹20,000" style="height:54%;"></div>
-    <div class="bar" data-value="₹25,200" style="height:67%;"></div>
-    <div class="bar" data-value="₹30,800" style="height:81%;"></div>
-    <div class="bar" data-value="₹38,000" style="height:98%;"></div>
-    <div class="bar" data-value="₹34,400" style="height:89%;"></div>
-    <div class="bar" data-value="₹28,500" style="height:74%;"></div>
-    <div class="bar" data-value="₹26,900" style="height:69%;"></div>
-    <div class="bar" data-value="₹19,800" style="height:52%;"></div>
-    <div class="bar" data-value="₹24,700" style="height:64%;"></div>
-    <div class="bar" data-value="₹29,900" style="height:79%;"></div>
-    <div class="bar" data-value="₹35,800" style="height:92%;"></div>
-    <div class="bar" data-value="₹22,300" style="height:60%;"></div>
-    <div class="bar" data-value="₹37,000" style="height:95%;"></div>
-  </div>
+        <div class="chart">
+          <!-- 30 bars for each day -->
+          <div class="bar" data-value="₹24,000" style="height:65%;"></div>
+          <div class="bar" data-value="₹30,200" style="height:82%;"></div>
+          <div class="bar" data-value="₹18,700" style="height:50%;"></div>
+          <div class="bar" data-value="₹26,800" style="height:70%;"></div>
+          <div class="bar" data-value="₹34,100" style="height:88%;"></div>
+          <div class="bar" data-value="₹28,000" style="height:75%;"></div>
+          <div class="bar" data-value="₹37,500" style="height:96%;"></div>
+          <div class="bar" data-value="₹31,800" style="height:80%;"></div>
+          <div class="bar" data-value="₹22,500" style="height:62%;"></div>
+          <div class="bar" data-value="₹25,700" style="height:68%;"></div>
+          <div class="bar" data-value="₹29,600" style="height:78%;"></div>
+          <div class="bar" data-value="₹15,400" style="height:44%;"></div>
+          <div class="bar" data-value="₹35,000" style="height:90%;"></div>
+          <div class="bar" data-value="₹32,400" style="height:83%;"></div>
+          <div class="bar" data-value="₹27,800" style="height:72%;"></div>
+          <div class="bar" data-value="₹33,000" style="height:86%;"></div>
+          <div class="bar" data-value="₹21,700" style="height:58%;"></div>
+          <div class="bar" data-value="₹20,000" style="height:54%;"></div>
+          <div class="bar" data-value="₹25,200" style="height:67%;"></div>
+          <div class="bar" data-value="₹30,800" style="height:81%;"></div>
+          <div class="bar" data-value="₹38,000" style="height:98%;"></div>
+          <div class="bar" data-value="₹34,400" style="height:89%;"></div>
+          <div class="bar" data-value="₹28,500" style="height:74%;"></div>
+          <div class="bar" data-value="₹26,900" style="height:69%;"></div>
+          <div class="bar" data-value="₹19,800" style="height:52%;"></div>
+          <div class="bar" data-value="₹24,700" style="height:64%;"></div>
+          <div class="bar" data-value="₹29,900" style="height:79%;"></div>
+          <div class="bar" data-value="₹35,800" style="height:92%;"></div>
+          <div class="bar" data-value="₹22,300" style="height:60%;"></div>
+          <div class="bar" data-value="₹37,000" style="height:95%;"></div>
+        </div>
 
-  <p class="muted">Hover over bars to view revenue for each day</p>
-</div>
+        <p class="muted">Hover over bars to view revenue for each day</p>
+      </div>
 
       <!-- Transaction Table -->
       <div class="transactions">
@@ -170,87 +183,84 @@
   </section>
 
   <div class="footer-main">
-            <div class="footer-links">
-                <div>
-                    <h4>COMPANY</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>CUSTOMER SERVICE</h4>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Loans</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Escrow</a></li>
-                        <li><a href="#">Manage My Account</a></li>
-                        <li><a href="#">Email Subscription</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>our services</h4>
-                    <ul>
-                        <li><a href="#">Blockchain Escrow</a></li>
-                        <li><a href="#">MSME Dashboard</a></li>
-                        <li><a href="#">Loans</a></li>
-                        <li><a href="#">Account Portal</a></li>
-                        <li><a href="#">Growth Metrics</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>FOLLOW US</h4>
-                    <div class="footer-social">
-                        <a href="#">
-                            <span class="footer-icon">
-                                <!-- Facebook SVG -->
-                                <img src="/icons/facebook.png" alt="Facebook" width="30" height="30"
-                                    class="footer-icon">
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="footer-icon">
-                                <!-- Twitter SVG -->
-                                <img src="/icons/twitter.png" alt="Facebook" width="30" height="30" class="footer-icon">
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="footer-icon">
-                                <!-- Instagram SVG -->
-                                <img src="/icons/instagram.png" alt="Facebook" width="30" height="30"
-                                    class="footer-icon">
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="footer-icon">
-                                <!-- YouTube SVG -->
-                                <img src="/icons/youtube.png" alt="Facebook" width="30" height="30"
-                                    class="footer-icon">
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-cards">
-                <img src="/icons/amazonpay.png" alt="Amazon Pay">
-                <img src="/icons/mastercard.png" alt="Mastercard">
-                <img src="/icons/maestro.png" alt="Maestro">
-                <img src="/icons/visa.png" alt="VISA">
-                <img src="/icons/visadebit.png" alt="VISA Debit">
-                <img src="/icons/paypal.png" alt="Paypal">
-                <img src="/icons/amex.png" alt="American Express">
-            </div>
-            <div class="footer-payment-text">
-                All major credit cards accepted | Fast checkout with Byapaar Pay
-            </div>
-            <div class="footer-copyright">
-                Byapaar, Rishihood University,2527873 Haryana, India. 
-            </div>
+    <div class="footer-links">
+      <div>
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CUSTOMER SERVICE</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Loans</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Escrow</a></li>
+          <li><a href="#">Manage My Account</a></li>
+          <li><a href="#">Email Subscription</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>our services</h4>
+        <ul>
+          <li><a href="#">Blockchain Escrow</a></li>
+          <li><a href="#">MSME Dashboard</a></li>
+          <li><a href="#">Loans</a></li>
+          <li><a href="#">Account Portal</a></li>
+          <li><a href="#">Growth Metrics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>FOLLOW US</h4>
+        <div class="footer-social">
+          <a href="#">
+            <span class="footer-icon">
+              <!-- Facebook SVG -->
+              <img src="/icons/facebook.png" alt="Facebook" width="30" height="30" class="footer-icon">
+            </span>
+          </a>
+          <a href="#">
+            <span class="footer-icon">
+              <!-- Twitter SVG -->
+              <img src="/icons/twitter.png" alt="Facebook" width="30" height="30" class="footer-icon">
+            </span>
+          </a>
+          <a href="#">
+            <span class="footer-icon">
+              <!-- Instagram SVG -->
+              <img src="/icons/instagram.png" alt="Facebook" width="30" height="30" class="footer-icon">
+            </span>
+          </a>
+          <a href="#">
+            <span class="footer-icon">
+              <!-- YouTube SVG -->
+              <img src="/icons/youtube.png" alt="Facebook" width="30" height="30" class="footer-icon">
+            </span>
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+    <div class="footer-cards">
+      <img src="/icons/amazonpay.png" alt="Amazon Pay">
+      <img src="/icons/mastercard.png" alt="Mastercard">
+      <img src="/icons/maestro.png" alt="Maestro">
+      <img src="/icons/visa.png" alt="VISA">
+      <img src="/icons/visadebit.png" alt="VISA Debit">
+      <img src="/icons/paypal.png" alt="Paypal">
+      <img src="/icons/amex.png" alt="American Express">
+    </div>
+    <div class="footer-payment-text">
+      All major credit cards accepted | Fast checkout with Byapaar Pay
+    </div>
+    <div class="footer-copyright">
+      Byapaar, Rishihood University,2527873 Haryana, India.
+    </div>
+  </div>
+  </footer>
   <footer class="footer">
     <div class="container">
       <p>© 2025 Byapaar. Empowering MSMEs.</p>
@@ -258,4 +268,5 @@
   </footer>
 
 </body>
+
 </html>
