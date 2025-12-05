@@ -1,0 +1,407 @@
+/* ===================================
+   INDEX PAGE STYLES (HOME PAGE)
+   =================================== */
+
+/* -----------------------------------
+   HERO SECTION
+----------------------------------- */
+.hero {
+    background-color: #0f2845;
+    padding: 100px 0;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 400px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.hero-text p {
+    color: var(--muted);
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+
+.hero-img-bg {
+    flex: 1 1 48%;
+    min-width: 300px;
+    height: 280px;
+    background-image: url('https://static.hdfcsky.com/wp-content/uploads/2025/07/PSBs-increase-lending-to-sub-prime-MSME-borrowers-on-the-back-of-government-guarantees​.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Download Buttons */
+.download-btns-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.btn-appdownload {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+        background 0.18s,
+        color 0.17s,
+        box-shadow 0.23s,
+        border 0.20s;
+    box-shadow: none;
+}
+
+.btn-appdownload:hover,
+.btn-appdownload:focus {
+    background: var(--accent);
+    color: var(--text);
+    border-color: var(--accent-hover);
+    text-decoration: none;
+}
+
+.btn-appdownload .icon-app {
+    width: 23px;
+    height: 23px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-appdownload .icon-app img,
+.btn-appdownload .icon-app svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.ps-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-appdownload .btn-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.14;
+    font-size: 16px;
+}
+
+.btn-appdownload .btn-txt span {
+    font-size: 13px;
+    color: var(--muted, #a9c3ea);
+    line-height: 1.1;
+}
+
+.btn-appdownload .btn-txt .big-txt {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* -----------------------------------
+   FEATURES SECTION
+----------------------------------- */
+.features {
+    background-color: var(--features-bg);
+    padding: 80px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.features h2 {
+    font-size: 1.9rem;
+    color: var(--features-text);
+    margin-bottom: 40px;
+}
+
+/* -----------------------------------
+   CTA SECTION
+----------------------------------- */
+.cta {
+    background: transparent;
+    color: #497097;
+    text-align: center;
+    padding: 90px 0;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.cta p {
+    margin-bottom: 20px;
+    max-width: 450px;
+    color: #9eb0c4;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+/* -----------------------------------
+   TESTIMONIALS - INFINITE SCROLL
+----------------------------------- */
+.testimonials {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: var(--testimonial-bg);
+    text-align: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--features-text);
+    font-weight: 700;
+    margin-bottom: 46px;
+    letter-spacing: 1.2px;
+}
+
+/* Wrapper to hide overflow */
+.testimonials-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Track that contains all cards and animates */
+.testimonial-track {
+    display: flex;
+    gap: 32px;
+    animation: scroll-left 40s linear infinite;
+    width: max-content;
+}
+
+/* Pause animation on hover */
+.testimonial-track:hover {
+    animation-play-state: paused;
+}
+
+/* Keyframe animation for continuous scrolling */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial-card {
+    background: var(--testimonial-card-bg);
+    color: var(--testimonial-text);
+    padding: 32px 28px 26px 28px;
+    border-radius: 32px;
+    box-shadow: 0 6px 24px rgba(31, 89, 184, 0.06);
+    width: 320px;
+    min-width: 320px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease;
+    flex-shrink: 0;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: greenyellow;
+    box-shadow: 0 14px 30px rgba(2, 63, 59, 0.2);
+}
+
+.testimonial-text {
+    font-size: 1.18rem;
+    margin-bottom: 21px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.testimonial-user {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #eaf2ff33;
+    background: #fff;
+}
+
+.testimonial-name {
+    font-size: 1.06rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* -----------------------------------
+   CONTACT SECTION
+----------------------------------- */
+.contact {
+    background-color: var(--bg);
+    padding: 100px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info h3 {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info ul li {
+    margin-bottom: 8px;
+    color: white;
+}
+
+.contact-form {
+    background-color: var(--panel);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bg);
+    color: white;
+    margin-bottom: 14px;
+    font-family: inherit;
+}
+
+/* -----------------------------------
+   RESPONSIVE - INDEX PAGE
+----------------------------------- */
+@media (max-width: 900px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        margin-top: 30px;
+        background-size: 85%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-track {
+        gap: 18px;
+        animation-duration: 30s;
+    }
+
+    .testimonial-card {
+        width: 280px;
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonials {
+        padding: 38px 6px 18px 6px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-track {
+        gap: 12px;
+        animation-duration: 25s;
+    }
+
+    .testimonial-card {
+        padding: 24px 14px;
+        border-radius: 20px;
+        font-size: 1rem;
+        width: 240px;
+        min-width: 240px;
+    }
+
+    .testimonial-avatar {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 540px) {
+    .card {
+        padding: 20px;
+    }
+}

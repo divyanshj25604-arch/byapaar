@@ -1,0 +1,162 @@
+/* ===================================
+   LOGIN PAGE STYLES
+   =================================== */
+
+/* -----------------------------------
+   LOGIN SECTION
+----------------------------------- */
+.login {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #031124, #071a38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.login .container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    background-color: var(--panel);
+    padding: 50px 40px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.login-box h2 {
+    color: var(--accent);
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.login-box p {
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+/* -----------------------------------
+   INPUT FIELDS
+----------------------------------- */
+.login-box input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: 0.3s ease;
+}
+
+.login-box input:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 6px rgba(32, 193, 181, 0.4);
+}
+
+/* -----------------------------------
+   REMEMBER ME + FORGOT PASSWORD
+----------------------------------- */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+    margin-top: 15px;
+}
+
+.remb {
+    margin-bottom: auto;
+}
+
+.remember input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--accent);
+    transform: translateY(1px);
+    /* centers checkbox vertically with text */
+}
+
+.forgot {
+    color: var(--accent-hover);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------------------
+   SIGNUP TEXT
+----------------------------------- */
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+.signup-text a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-text a:hover {
+    color: var(--accent-hover);
+}
+
+/* -----------------------------------
+   RESPONSIVE - LOGIN PAGE
+----------------------------------- */
+@media (max-width: 600px) {
+    .login-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .forgot {
+        align-self: flex-end;
+    }
+
+    .login-box {
+        padding: 35px 24px;
+    }
+
+    .login-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .login-box input {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 540px) {
+    .login-box {
+        padding: 28px;
+    }
+}

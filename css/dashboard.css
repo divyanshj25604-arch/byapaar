@@ -1,0 +1,283 @@
+/* ===================================
+   DASHBOARD PAGE STYLES
+   =================================== */
+
+/* -----------------------------------
+   DASHBOARD MAIN SECTION
+----------------------------------- */
+section.dashboard {
+    padding: 100px 0;
+    background-color: var(--bg);
+    text-align: center;
+}
+
+section h2 {
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+section p {
+    color: var(--muted);
+    margin-bottom: 40px;
+}
+
+.dash-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.dash-header h2 {
+    color: var(--text);
+    font-size: 1.8rem;
+}
+
+.dash-header p {
+    color: var(--muted);
+}
+
+/* -----------------------------------
+   STAT GRID
+----------------------------------- */
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.stat-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid rgba(0, 255, 140, 0.33);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* -----------------------------------
+   RESPONSIVE MONTHLY BAR CHART
+----------------------------------- */
+.chart-section {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.chart-section h3 {
+    color: var(--accent-hover);
+    margin-bottom: 20px;
+}
+
+/* Chart container */
+.chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 240px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-bottom: 14px;
+    position: relative;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+/* Scrollbar styling */
+.chart::-webkit-scrollbar {
+    height: 6px;
+}
+
+.chart::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.chart::-webkit-scrollbar-thumb {
+    background: var(--accent-hover);
+    border-radius: 6px;
+}
+
+/* Bar styling */
+.bar {
+    flex: 0 0 24px;
+    background: var(--accent);
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    min-height: 20px;
+    scroll-snap-align: end;
+}
+
+.bar:hover {
+    background: var(--accent-hover);
+    transform: scaleY(1.05);
+}
+
+.bar:hover::before {
+    opacity: 1;
+}
+
+/* -----------------------------------
+   TRANSACTIONS TABLE
+----------------------------------- */
+.transactions {
+    background-color: var(--panel);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 70px;
+}
+
+.transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text);
+    text-align: left;
+    margin-top: 15px;
+}
+
+.transactions th,
+.transactions td {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.08);
+}
+
+.transactions th {
+    color: var(--accent-hover);
+    font-weight: 600;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.badge.success {
+    background: rgba(2, 23, 22, 0.2);
+    color: var(--accent);
+}
+
+.badge.pending {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+.badge.failed {
+    background: rgba(255, 77, 77, 0.2);
+    color: #ff4d4d;
+}
+
+/* -----------------------------------
+   CREDIT SUMMARY BOX
+----------------------------------- */
+.credit-summary {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.credit-box {
+    background: var(--panel);
+    padding: 30px;
+    border-radius: 12px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    margin: 10px 0 15px 0;
+}
+
+.progress {
+    height: 8px;
+    background: var(--accent-hover);
+    border-radius: 5px;
+}
+
+/* Dashboard Charts */
+.chart-box {
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.chart-placeholder {
+    background: rgba(255, 255, 255, 0.05);
+    height: 180px;
+    border-radius: 8px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* -----------------------------------
+   RESPONSIVE - DASHBOARD
+----------------------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .chart {
+        height: 200px;
+        padding: 24px 16px;
+    }
+
+    .bar {
+        flex: 0 0 20px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+    .chart {
+        height: 180px;
+        padding: 20px 12px;
+        gap: 8px;
+    }
+
+    .bar {
+        flex: 0 0 16px;
+        /* narrower bars */
+        border-radius: 4px;
+    }
+
+    .bar::after {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+
+    .chart-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .chart-section p {
+        font-size: 0.9rem;
+    }
+}
