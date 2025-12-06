@@ -1,10 +1,3 @@
-/* ===================================
-   INDEX PAGE STYLES (HOME PAGE)
-   =================================== */
-
-/* -----------------------------------
-   HERO SECTION
------------------------------------ */
 .hero {
     background-color: #0f2845;
     padding: 100px 0;
@@ -49,7 +42,6 @@
     display: inline-block;
 }
 
-/* Download Buttons */
 .download-btns-row {
     display: flex;
     gap: 18px;
@@ -126,9 +118,6 @@
     color: #fff;
 }
 
-/* -----------------------------------
-   FEATURES SECTION
------------------------------------ */
 .features {
     background-color: var(--features-bg);
     padding: 80px 0;
@@ -142,9 +131,6 @@
     margin-bottom: 40px;
 }
 
-/* -----------------------------------
-   CTA SECTION
------------------------------------ */
 .cta {
     background: transparent;
     color: #497097;
@@ -166,9 +152,6 @@
     margin-bottom: 50px;
 }
 
-/* -----------------------------------
-   TESTIMONIALS - INFINITE SCROLL
------------------------------------ */
 .testimonials {
     width: 100%;
     padding: 60px 20px;
@@ -186,14 +169,12 @@
     letter-spacing: 1.2px;
 }
 
-/* Wrapper to hide overflow */
 .testimonials-wrapper {
     overflow: hidden;
     position: relative;
     width: 100%;
 }
 
-/* Track that contains all cards and animates */
 .testimonial-track {
     display: flex;
     gap: 32px;
@@ -201,12 +182,10 @@
     width: max-content;
 }
 
-/* Pause animation on hover */
 .testimonial-track:hover {
     animation-play-state: paused;
 }
 
-/* Keyframe animation for continuous scrolling */
 @keyframes scroll-left {
     0% {
         transform: translateX(0);
@@ -271,9 +250,6 @@
     letter-spacing: 0.2px;
 }
 
-/* -----------------------------------
-   CONTACT SECTION
------------------------------------ */
 .contact {
     background-color: var(--bg);
     padding: 100px 0;
@@ -334,9 +310,6 @@
     font-family: inherit;
 }
 
-/* -----------------------------------
-   RESPONSIVE - INDEX PAGE
------------------------------------ */
 @media (max-width: 900px) {
     .hero-flex {
         flex-direction: column;

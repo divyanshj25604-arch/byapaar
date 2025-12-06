@@ -1,10 +1,3 @@
-/* ===================================
-   LOGIN PAGE STYLES
-   =================================== */
-
-/* -----------------------------------
-   LOGIN SECTION
------------------------------------ */
 .login {
     min-height: 100vh;
     background: linear-gradient(120deg, #031124, #071a38);
@@ -41,9 +34,6 @@
     margin-bottom: 24px;
 }
 
-/* -----------------------------------
-   INPUT FIELDS
------------------------------------ */
 .login-box input {
     width: 100%;
     padding: 12px 14px;
@@ -63,9 +53,6 @@
     box-shadow: 0 0 6px rgba(32, 193, 181, 0.4);
 }
 
-/* -----------------------------------
-   REMEMBER ME + FORGOT PASSWORD
------------------------------------ */
 .login-options {
     display: flex;
     justify-content: space-between;
@@ -95,7 +82,6 @@
     cursor: pointer;
     accent-color: var(--accent);
     transform: translateY(1px);
-    /* centers checkbox vertically with text */
 }
 
 .forgot {
@@ -109,9 +95,6 @@
     text-decoration: underline;
 }
 
-/* -----------------------------------
-   SIGNUP TEXT
------------------------------------ */
 .signup-text {
     text-align: center;
     margin-top: 20px;
@@ -128,9 +111,6 @@
     color: var(--accent-hover);
 }
 
-/* -----------------------------------
-   RESPONSIVE - LOGIN PAGE
------------------------------------ */
 @media (max-width: 600px) {
     .login-options {
         flex-direction: column;

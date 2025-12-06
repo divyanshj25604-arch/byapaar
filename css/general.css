@@ -1,15 +1,9 @@
-/* ===================================
-   GENERAL STYLES - SHARED ACROSS ALL PAGES
-   =================================== */
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BASE */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--body-bg);
@@ -24,7 +18,6 @@ body {
     margin: 0 auto;
 }
 
-/* COLORS */
 :root {
     --bg: #0f2845;
     --panel: #436291;
@@ -34,7 +27,6 @@ body {
     --dark: #8f9cb0;
     --text: #000000;
 
-    /* Light mode colors */
     --body-bg: #071227;
     --body-text: #eaf2ff;
     --header-bg: #ffffff;
@@ -49,7 +41,6 @@ body {
     --footer-signup-text: #000000;
 }
 
-/* Dark mode colors */
 body.dark-mode {
     --body-bg: #0a0e1a;
     --body-text: #e0e6ed;
@@ -71,9 +62,6 @@ body.dark-mode {
     --text: #e0e6ed;
 }
 
-/* -----------------------------------
-   HEADER / NAVBAR
------------------------------------ */
 .site-header {
     background-color: var(--header-bg);
     padding: 14px 0;
@@ -173,16 +161,10 @@ body.dark-mode {
     transform: translateY(-2px);
 }
 
-/* -----------------------------------
-   HAMBURGER MENU (CSS-ONLY)
------------------------------------ */
-
-/* Hide the checkbox */
 .menu-toggle {
     display: none;
 }
 
-/* Hamburger icon - hidden by default on desktop */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -200,9 +182,6 @@ body.dark-mode {
     transition: all 0.3s ease;
 }
 
-/* -----------------------------------
-   BUTTONS
------------------------------------ */
 .btn {
     display: inline-block;
     background: var(--accent);
@@ -237,9 +216,6 @@ body.dark-mode {
     transform: translateY(-2px);
 }
 
-/* -----------------------------------
-   CARDS
------------------------------------ */
 .card-grid {
     display: flex;
     flex-wrap: wrap;
@@ -287,9 +263,6 @@ body.dark-mode {
     font-size: 1.3rem;
 }
 
-/* -----------------------------------
-   FOOTER
------------------------------------ */
 .site-footer {
     background: var(--bg);
     color: #000000;
@@ -475,11 +448,6 @@ body.dark-mode {
     padding: 24px 0;
 }
 
-/* -----------------------------------
-   ICON FIXES
------------------------------------ */
-
-/* General icon container */
 .icon,
 .icon-box svg {
     width: 22px;
@@ -492,7 +460,6 @@ body.dark-mode {
     transition: 0.2s ease;
 }
 
-/* Small icons inside text/buttons */
 .btn .icon,
 h1 .icon,
 h2 .icon,
@@ -505,20 +472,17 @@ h3 .icon {
     top: 2px;
 }
 
-/* Aligning icons in buttons */
 .btn svg.icon {
     stroke: currentColor;
     fill: none;
 }
 
-/* Fix color inheritance */
 .icon,
 .icon-box svg {
     color: inherit;
     stroke: currentColor;
 }
 
-/* SVG icons inside headings or forms */
 .contact-info h3 .icon,
 .contact-form .btn .icon {
     width: 20px;
@@ -527,7 +491,6 @@ h3 .icon {
     vertical-align: middle;
 }
 
-/* Fix line-height issues across browsers */
 svg.icon {
     display: inline-block;
     vertical-align: middle;
@@ -535,9 +498,6 @@ svg.icon {
     top: -1px;
 }
 
-/* -----------------------------------
-   DARK MODE TOGGLE BUTTON
------------------------------------ */
 .dark-mode-toggle {
     position: fixed;
     bottom: 30px;
@@ -566,9 +526,6 @@ svg.icon {
     transform: scale(0.95);
 }
 
-/* -----------------------------------
-   RESPONSIVE - GENERAL
------------------------------------ */
 @media (max-width: 900px) {
     .footer-links {
         gap: 22px;
@@ -599,15 +556,12 @@ svg.icon {
     }
 }
 
-/* Mobile Navigation - Hamburger Menu */
 @media (max-width: 768px) {
 
-    /* Show hamburger icon */
     .hamburger {
         display: flex;
     }
 
-    /* Hide nav links by default on mobile */
     .nav-links {
         position: absolute;
         top: 100%;
@@ -625,13 +579,11 @@ svg.icon {
         border-radius: 0 0 8px 8px;
     }
 
-    /* Show nav links when checkbox is checked */
     .menu-toggle:checked~.nav-links {
         max-height: 400px;
         padding: 20px 0;
     }
 
-    /* Style nav links for mobile */
     .nav-links a {
         width: 100%;
         text-align: center;
@@ -643,7 +595,6 @@ svg.icon {
         border-bottom: none;
     }
 
-    /* Login button in mobile menu */
     .nav-links .btn-nav {
         margin: 10px 20px;
         width: calc(100% - 40px);
@@ -651,7 +602,6 @@ svg.icon {
         display: block;
     }
 
-    /* Adjust header container for mobile */
     .site-header .container {
         position: relative;
     }
